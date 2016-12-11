@@ -31,6 +31,14 @@
 			$body.classList.remove('is-loading');
 		});
 
+	// Buttons.
+		var $buttonLikeElements = document.querySelector('.button');
+		// Event: Force button-like elements to automatically un-focus after click ends
+			addEventsListener($buttonLikeElements, 'click touchend', function (event) {
+				event.blur();
+			});
+
+	//==================================================================================================================
 	// Nav.
 		var	$nav = document.querySelector('#nav'),
 			$navToggle = document.querySelector('a[href="#nav"]'),
